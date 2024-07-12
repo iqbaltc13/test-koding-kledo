@@ -23,7 +23,7 @@ class CreateTableApprovals extends Migration
             $table->string('id')->primary();
             $table->string('approver_id')->nullable();
             $table->string('expense_id')->nullable();
-            $table->string('status_id_id')->nullable();
+            $table->string('status_id')->nullable();
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
             $table->dateTime('deleted_at')->nullable();
@@ -39,21 +39,12 @@ class CreateTableApprovals extends Migration
     {
         $this->schema->dropIfExists($this->table_name);
     }
-    public function up()
-    {
-        Schema::create('table_approvals', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+   
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('table_approvals');
-    }
+    
 }

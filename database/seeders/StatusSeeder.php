@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Status;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Schema;
+use DB;
 
 class StatusSeeder extends Seeder
 {

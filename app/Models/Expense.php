@@ -26,4 +26,8 @@ class Expense extends Model
     public function approvals(){
         return $this->hasMany('App\Models\Approval','expense_id','id');
     }
+    public function status()
+    {
+        return $this->belongsTo('App\Models\Status', 'status_id', 'id');
+    }
 }
